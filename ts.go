@@ -14,12 +14,6 @@ import (
 // Version is app version
 var Version string
 
-func init() {
-	if Version == "" {
-		Version = "dev-" + time.Now().Format("20060102")
-	}
-}
-
 type globalCmd struct {
 	Line string `cli:"line" default:"[%H:%M:%S] " help:"%Y %m %d %a %H %M %S %Z"`
 }
